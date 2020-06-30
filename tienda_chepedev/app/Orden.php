@@ -12,7 +12,11 @@ class Orden extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'orden_id', 'user_id');
+        return $this->belongsTo('App\User', 'orden_id', 'id');
+    }
+    public function productos()
+    {
+        return $this->belongsToMany('App\Producto', 'detalle_ordenes', 'orden_id', 'producto_id');
     }
 
     

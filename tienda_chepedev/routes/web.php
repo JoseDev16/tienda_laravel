@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    #$user = App\User::findOrFail(1);
+    #return view('welcome');
+    $user = App\Tag::findOrFail(1);
 
-    #return $user->ordenes;
+    return $user->productos;
 });

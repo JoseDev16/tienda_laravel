@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function ordenes()
     {
-        return $this->hasMany('App\Orden', 'user_id', 'orden_id');
+        return $this->hasMany('App\Orden',  'orden_id');
     }
 }
