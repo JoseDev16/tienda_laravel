@@ -10,9 +10,9 @@ class Orden extends Model
     protected $primaryKey = 'orden_id';
     protected $table= 'ordenes';
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User', 'orden_id', 'user_id');
     }
 
     

@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function orden()
+    public function ordenes()
     {
-        return $this->belongsTo('App\Orden', 'orden_id', 'orden_id');
+        return $this->hasMany('App\Orden', 'user_id', 'orden_id');
     }
 }
