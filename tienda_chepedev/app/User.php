@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function orden()
+    {
+        return $this->belongsTo('App\Orden', 'orden_id', 'orden_id');
+    }
 }
