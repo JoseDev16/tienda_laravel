@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    #return view('welcome');
-    $user = App\Tag::findOrFail(1);
-
-    return $user->productos;
-});
+Route::get('/', 'ProductoController@index')->name('home');
+Route::get('producto/{id}', 'ProductoController@show')->name('detalles');

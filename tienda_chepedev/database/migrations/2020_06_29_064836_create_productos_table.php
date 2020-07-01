@@ -20,6 +20,7 @@ class CreateProductosTable extends Migration
             $table->float('precioUnitario');
             $table->boolean('disponible');
             $table->integer('cantidad');
+            $table->string('image', 300)->nulleabe();
             $table->timestamps();
             $table->unsignedBigInteger('subdepartamento_id');
             
